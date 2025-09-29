@@ -13,7 +13,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const viewport: Viewport = {
-  themeColor: "#030014",
+  themeColor: "#000",
 };
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="en">
       <body
         className={cn(
-          "bg-[#030014] overflow-y-scroll overflow-x-hidden",
+          "bg-[#000] overflow-y-scroll overflow-x-hidden",
           inter.className
         )}
       >
