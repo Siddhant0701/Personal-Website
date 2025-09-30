@@ -7,6 +7,7 @@ import {
   FULLSTACK_SKILL,
   OTHER_SKILL,
   SKILL_DATA,
+  TOOLS_SKILL,
 } from "@/constants";
 
 export const Skills = () => {
@@ -22,8 +23,7 @@ export const Skills = () => {
         {SKILL_DATA.map((skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
+            iconName={skill.iconName}
             width={skill.width}
             height={skill.height}
             index={i}
@@ -35,8 +35,7 @@ export const Skills = () => {
         {FRONTEND_SKILL.map((skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
+            iconName={skill.iconName}
             width={skill.width}
             height={skill.height}
             index={i}
@@ -47,8 +46,7 @@ export const Skills = () => {
         {BACKEND_SKILL.map((skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
+            iconName={skill.iconName}
             width={skill.width}
             height={skill.height}
             index={i}
@@ -59,8 +57,7 @@ export const Skills = () => {
         {FULLSTACK_SKILL.map((skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
+            iconName={skill.iconName}
             width={skill.width}
             height={skill.height}
             index={i}
@@ -71,8 +68,18 @@ export const Skills = () => {
         {OTHER_SKILL.map((skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
+            iconName={skill.iconName}
+            width={skill.width}
+            height={skill.height}
+            index={i}
+          />
+        ))}
+      </div>
+      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+        {TOOLS_SKILL.map((skill, i) => (
+          <SkillDataProvider
+            key={skill.skill_name}
+            iconName={skill.iconName}
             width={skill.width}
             height={skill.height}
             index={i}
