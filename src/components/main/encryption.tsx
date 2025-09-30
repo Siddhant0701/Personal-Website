@@ -49,19 +49,6 @@ export const Encryption = () => {
           Secure your data with end-to-end encryption.
         </div>
       </div>
-
-      <div className="w-full flex items-start justify-center absolute">
-        <video
-          loop
-          muted
-          autoPlay
-          playsInline
-          preload="false"
-          className="w-full h-auto"
-        >
-          <source src="/videos/encryption-bg.webm" type="video/webm" />
-        </video>
-      </div>
     </div>
   );
 };
