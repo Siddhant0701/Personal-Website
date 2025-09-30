@@ -4,7 +4,8 @@ import { Points, PointMaterial } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef, Suspense, type ComponentProps, useMemo, useEffect } from "react";
 import type { Points as PointsType } from "three";
-import { Sphere, Vector3 } from "three";
+import { Sphere, Vector3, MathUtils } from "three";
+import { HeroParticles } from "./particles";
 
 export const StarBackground = (props: Partial<ComponentProps<typeof Points>>) => {
   const ref = useRef<PointsType | null>(null);
@@ -27,10 +28,16 @@ export const StarBackground = (props: Partial<ComponentProps<typeof Points>>) =>
     return positions;
   }, []);
 
-  useFrame((_state, delta) => {
+  useFrame((state, delta) => {
     if (ref.current) {
-      ref.current.rotation.x -= delta / 10;
-      ref.current.rotation.y -= delta / 15;
+      // Mouse-based rotation with smooth interpolation
+      const { mouse } = state;
+      const targetX = mouse.y * -0.3;
+      const targetY = mouse.x * -0.3;
+
+      // Smoothly move rotation towards the target
+      ref.current.rotation.x = MathUtils.lerp(ref.current.rotation.x, targetX, 0.02);
+      ref.current.rotation.y = MathUtils.lerp(ref.current.rotation.y, targetY, 0.02);
     }
   });
 
@@ -67,10 +74,6 @@ export const StarBackground = (props: Partial<ComponentProps<typeof Points>>) =>
 
 export const StarsCanvas = () => (
   <div className="w-full h-auto fixed inset-0 -z-10">
-    <Canvas camera={{ position: [0, 0, 1] }}>
-      <Suspense fallback={null}>
-        <StarBackground />
-      </Suspense>
-    </Canvas>
+    <HeroParticles />
   </div>
 );
