@@ -50,7 +50,7 @@ export const HeroContent = () => {
         >
           Hi, I&apos;m Siddhant Mahajan. I specialize in distributed systems,
           event-driven architecture, developer tooling, and machine learning
-          algorithms. I love tackling ambitious, unique projects—especially those
+          solutions. I love tackling ambitious, unique projects—especially those
           that are fun, technically challenging, and push me to explore new ideas.
         </motion.p>
 
@@ -67,14 +67,14 @@ export const HeroContent = () => {
         variants={slideInFromRight(0.8)}
         className="w-full h-full flex justify-center items-center"
       >
-        <Image
+        {/* <Image
           src="/hero-bg.svg"
           alt="Siddhant Mahajan"
           height={320}
           width={320}
           draggable={false}
           className="select-none md:w-[650px] md:h-[650px] w-[220px] h-[220px]"
-        />
+        /> */}
       </motion.div>
     </motion.div>
   );

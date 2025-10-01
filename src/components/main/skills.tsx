@@ -13,12 +13,12 @@ export const Skills = () => {
   return (
     <section
       id="skills"
-      style={{ transform: "scale(0.8)" }}
-      className="flex flex-col items-center justify-center gap-8 h-full relative overflow-hidden py-24"
+      className="flex flex-col items-center justify-center gap-8 h-full relative overflow-hidden py-24 px-4"
     >
       <SkillText />
 
-      <div className="w-[1200px] grid grid-cols-8 gap-6 mt-8">
+      {/* Programming Languages */}
+      <div className="max-w-[1200px] w-full grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 md:gap-6">
         {SKILL_DATA.map((skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
@@ -30,7 +30,8 @@ export const Skills = () => {
         ))}
       </div>
 
-      <div className="w-[1200px] grid grid-cols-7 gap-6 mt-12">
+      {/* Backend Skills */}
+      <div className="max-w-[1200px] w-full grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 md:gap-6 mt-8">
         {BACKEND_SKILL.map((skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
@@ -41,7 +42,9 @@ export const Skills = () => {
           />
         ))}
       </div>
-            <div className="w-[1200px] grid grid-cols-6 gap-6 mt-12">
+
+      {/* Development Tools */}
+      <div className="max-w-[1200px] w-full grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 md:gap-6 mt-8">
         {TOOLS_SKILL.map((skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
@@ -52,18 +55,9 @@ export const Skills = () => {
           />
         ))}
       </div>
-      <div className="w-[1200px] grid grid-cols-5 gap-6 mt-12">
-        {FULLSTACK_SKILL.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            iconName={skill.iconName}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
-        ))}
-      </div>
-            <div className="w-[1200px] grid grid-cols-4 gap-6 mt-12">
+
+      {/* Frontend Skills */}
+      <div className="max-w-[1200px] w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 mt-8">
         {FRONTEND_SKILL.map((skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
@@ -75,7 +69,17 @@ export const Skills = () => {
         ))}
       </div>
 
-      <div className="w-full h-full absolute">
+      {/* DevOps & Cloud */}
+      <div className="max-w-[1200px] w-full grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 md:gap-6 mt-8">
+        {FULLSTACK_SKILL.map((skill, i) => (
+          <SkillDataProvider
+            key={skill.skill_name}
+            iconName={skill.iconName}
+            width={skill.width}
+            height={skill.height}
+            index={i}
+          />
+        ))}
       </div>
     </section>
   );

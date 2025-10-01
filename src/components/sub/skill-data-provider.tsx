@@ -179,11 +179,11 @@ export const SkillDataProvider = ({
       animate={inView ? "visible" : "hidden"}
       custom={index}
       transition={{ delay: index * animationDelay }}
-      className="flex flex-col items-center"
+      className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4"
     >
       <Icon 
         {...(iconProps as React.ComponentProps<typeof Icon>)}
-        className={`${iconColor} transition-colors duration-200`}
+        className={`${iconColor} w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 transition-colors duration-200`}
       />
     </motion.div>
   );

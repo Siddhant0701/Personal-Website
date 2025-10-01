@@ -74,7 +74,7 @@ export const particlesOptions: ISourceOptions = {
         parallax: { enable: false, force: 60, smooth: 10 }
       },
       onClick: { 
-        enable: true, 
+        enable: false, 
         mode: "push" 
       },
       resize: { enable: true },
@@ -102,7 +102,7 @@ export const particlesOptions: ISourceOptions = {
         radius: 100
       },
       push: { 
-        quantity: 2 
+        quantity: 1
       }
     },
   },
