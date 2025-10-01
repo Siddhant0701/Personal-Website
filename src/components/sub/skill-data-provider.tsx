@@ -152,7 +152,8 @@ export const SkillDataProvider = ({
   width,
   height,
   index,
-}: SkillDataProviderProps) => {
+  className = "",
+}: SkillDataProviderProps & { className?: string }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });

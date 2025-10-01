@@ -184,28 +184,6 @@ export const FULLSTACK_SKILL: Skill[] = [
   },
 ] as const;
 
-export const OTHER_SKILL: Skill[] = [
-  // Databases
-  {
-    skill_name: "PostgreSQL",
-    iconName: "SiPostgresql",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "MySQL",
-    iconName: "SiMysql",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "MongoDB",
-    iconName: "SiMongodb",
-    width: 80,
-    height: 80,
-  },
-] as const;
-
 // Additional skill category for Scripting & Tools
 export const TOOLS_SKILL: Skill[] = [
   {
@@ -223,6 +201,25 @@ export const TOOLS_SKILL: Skill[] = [
   {
     skill_name: "Postman",
     iconName: "SiPostman",
+    width: 80,
+    height: 80,
+  },
+    // Databases
+  {
+    skill_name: "PostgreSQL",
+    iconName: "SiPostgresql",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "MySQL",
+    iconName: "SiMysql",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "MongoDB",
+    iconName: "SiMongodb",
     width: 80,
     height: 80,
   },
