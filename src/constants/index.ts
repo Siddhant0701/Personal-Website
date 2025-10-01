@@ -228,22 +228,23 @@ export const TOOLS_SKILL: Skill[] = [
 export const PROJECTS = [
   {
     title: "Rock Paper Scissors AI Player",
-    description: '',
+    description: 'An AI that predicts moves with Markov models to beat humans most of the time.',
     image: "/projects/project-1.png",
     link: "https://github.com/Siddhant0701/Rock-Paper-Scissors-AI-Player",
   },
   {
-    title: "ArtiFace - AI Image Generator",
-    description:'',
-    image: "/projects/project-2.png",
-    link: "https://github.com/Siddhant0701/ArtiFace",
-  },
-  {
     title: "Codebase Navigator",
-    description:'',
+    description:'(Work in Progress)',
     image: "/projects/project-3.png",
     link: "",
   },
+  {
+    title: "ArtiFace - AI Image Generator",
+    description:'A GAN that generates realistic human facial features.',
+    image: "/projects/project-2.png",
+    link: "https://github.com/Siddhant0701/ArtiFace",
+  },
+  
 ] as const;
 
 export const FOOTER_DATA = [

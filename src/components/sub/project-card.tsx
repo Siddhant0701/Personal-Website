@@ -21,17 +21,22 @@ export const ProjectCard = ({
       rel="noreferrer noopener"
       className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]"
     >
-      <Image
-        src={src}
-        alt={title}
-        width={1000}
-        height={1000}
-        className="w-full object-contain"
-      />
+      <div className="relative w-full pt-[56.25%]">
+        <Image
+          src={src}
+          alt={title}
+          fill
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        />
+      </div>
 
-      <div className="relative p-4">
-        <h1 className="text-2xl font-semibold text-white">{title}</h1>
-        <p className="mt-2 text-gray-300">{description}</p>
+      <div className="relative p-6">
+        <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 text-center mb-3">
+          {title}
+        </h1>
+        <p className="text-gray-300 text-center text-sm leading-relaxed">
+          {description}
+        </p>
       </div>
     </Link>
   );
